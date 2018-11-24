@@ -498,7 +498,7 @@ public class Example implements IDynamicTableName {
                 if (propertyMap.get(property) != null) {
                     Object value = metaObject.getValue(property);
                     //属性值不为空
-                    if (value != null) {
+                    if (value != null && !value.toString().equals("")) {
                         andEqualTo(property, value);
                     }
                 }
